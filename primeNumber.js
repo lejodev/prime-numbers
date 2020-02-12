@@ -1,17 +1,24 @@
 module.exports = {
     prime: function()
     {
-        return 'Result = ' + calculatePrime();
+        return calculatePrime();
     }
 };
-
-var primeString = ""
 // It is partially a good solution, because 15 an other numbers are not prime. Pending this functionality for next commit
 function calculatePrime(){
-    for(i = 0; i < 100; i++){
-        if(i % 2 != 0){
+    var count = 0;
+    var primeString = "";
+    for(i = 1; i <= 100; i++){
+        count = 0;
+        for(j = 1; j <= i; j++){
+            var division = i/j;
+            if(Number.isInteger(division)){
+                count++;
+            }
+        }
+        if(count == 2){
             primeString += (i + " ");
         }
     }
-    return primeString;
+    return 'Prime numbers from 1 to 100: ' + primeString;
 }

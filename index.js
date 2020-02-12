@@ -11,5 +11,5 @@ app.listen(3002, function(){
 
 app.get('/', function(req, res){
     const prm = getPrime.prime();
-    res.send('Hawfe result = ' + prm);
+    res.send(prm);
 });
