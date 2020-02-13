@@ -4,7 +4,6 @@ module.exports = {
         return calculatePrime();
     }
 };
-// It is partially a good solution, because 15 an other numbers are not prime. Pending this functionality for next commit
 function calculatePrime(){
     var count = 0;
     var primeString = "";
